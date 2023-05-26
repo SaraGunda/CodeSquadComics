@@ -1,0 +1,25 @@
+<%- include('../partials/head') -%> <%- include('../partials/navbar') -%>
+
+<div class="card">
+  <div class="topcard">
+    <h4><%= data.title %></h4>
+    <img class="watchman" src="/images/<%= data.image %>" alt="Comic cover." />
+  </div>
+  <div class="bottomcard">
+    <div class="cardq">
+      <p><span>Title:</span> <%= data.title %></p>
+      <p><span>Author:</span><%= data.author %></p>
+      <p><span>Publisher:</span> <%= data.publisher %></p>
+      <p><span>Genre:</span> <%= data.genre %></p>
+      <p><span>Number of pages:</span> <%= data.pages %></p>
+      <p>
+        <span>Rating:</span> <% for(let i = 0; i < data.rating; i++) { %>
+        <i class="fas fa-star"></i>
+        <% }%>
+      </p>
+      <p><span>Synopsis:</span> <%= data.synopsis %></p>
+    </div>
+  </div>
+</div>
+
+<%- include('../partials/footer') -%>

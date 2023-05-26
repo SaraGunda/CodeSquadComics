@@ -1,0 +1,110 @@
+<%- include('../partials/head') -%> <%- include('../partials/navbar') -%>
+
+    <div class="updatemain">
+      <!-- <form
+        class="updateform"
+        action="https://www.w3schools.com/action_page.php"
+        method="POST"
+        target="_blank"
+      > -->
+      <form action="/" method="POST"></form>
+        <h1>Update Comic</h1>
+        <fieldset class="updatefield">
+          <label>Title:</label>
+          <input
+            class="update"
+            type="text"
+            name="Title"
+            id="title"
+            value="<%=data.title %>"
+            minlength="1"required
+          />
+          <p>
+            <label>Image:</label>
+            <input
+              class="update"
+              type="text"
+              name="photo"
+              id="photo"
+              value="<%=data.image %>"
+            />
+          </p>
+          <!-- add a new input field that has a type of text. This field will temporarily handle images for each new or updating comic book.  -->
+          <p>
+            <label>Author:</label>
+            <input
+              class="update"
+              type="text"
+              name="Author"
+              id="author"
+              value="<%=data.author %>"
+              minlength="1"required
+            />
+          </p>
+          <p>
+            <label for="Publisher">Publisher:</label>
+            <select name="Publisher" id="publisher" class="update">
+              <option value="boom! box">BOOM! Box</option>
+              <option value="dc comics">DC Comics</option>
+              <option value="Harry N. Abrams">Harry N. Abrams</option>
+              <option value="Icon Books">Icon Books</option>
+              <option value="Image Comics">Image Comics</option>
+              <option value="Marvel">Marvel</option>
+              <option value="Simon & Schuster">Simon & Shuster</option>
+              <option value="Top Shelf Productions">
+                Top Shelf Productions
+              </option>
+              <option value="VIZ Media LLC">VIZ Media LLC</option>
+            </select>
+          </p>
+          <p>
+            <label>Genre:</label>
+            <input
+              class="update"
+              type="text"
+              name="Genre"
+              id="genre"
+              value="<%=data.genre %>"
+              minlength="1" 
+              required
+            />
+          </p>
+          <p>
+            <label>Number of Pages:</label>
+            <input
+              class="update"
+              type="text"
+              name="Pages"
+              id="page"
+              value="<%=data.pages %>"
+              min="1"required
+            />
+          </p>
+          <p>
+            <label>Rating:</label>
+            <input
+              class="update"
+              type="text"
+              name="Rating"
+              id="rating"
+              value="<%=data.rating %>"
+              min="0" max="5"required
+            />
+          </p>
+          <p>
+            <label>Synopsis:</label>
+            <input
+              class="update"
+              type="text"
+              name="Synopsis"
+              id="synopsis"
+              value="<%=data.synopsis %>"
+              minlength="1"required
+            />
+          </p>
+          <p><input value = "submit" type="submit" /></p>
+        </fieldset>
+      </form>
+    </div>
+
+<%- include('../partials/footer') -%>

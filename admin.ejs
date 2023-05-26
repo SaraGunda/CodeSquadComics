@@ -1,0 +1,19 @@
+<%- include('../partials/head') -%> <%- include('../partials/navbar') -%>
+
+<div class="maintxt">
+  <h1>Admin Page</h1>
+  <div class="scroll">
+    <a href="/create" class="btn">Add New Comic</a>
+    <table>
+      <tr>
+        <th>Comic Title</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <%- include('../partials/book-listing') -%>
+    </table>
+    <a href="/" class="btn">Logout</a>
+  </div>
+</div>
+
+<%- include('../partials/footer') -%>

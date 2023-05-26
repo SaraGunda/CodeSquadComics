@@ -1,0 +1,372 @@
+html {
+    background: linear-gradient(var(--white), var(--teal));
+}
+
+body {
+    margin: 0%;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+    /* display: flex;
+    align-items: center;
+    flex-direction: column; */
+}
+
+:root {
+    --blue: #063C5E;
+    --white: rgb(255, 255, 255);
+    --gold: rgb(224, 186, 16);
+    --yellow: rgba(235, 224, 17, 0.958);
+    --teal: rgb(16, 159, 159);
+    --gray: rgb(210, 211, 191);
+    --pink: rgb(250, 75, 163);
+    --black: rgb(0, 0, 0);
+  }
+  
+.topnav {
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: row;
+    /* margin: 0%; */
+    /* padding: 1%; */
+    height: 100px;
+    /* width: auto; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.maintxt {
+    background-color: var(--white);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border: solid var(--blue);
+    text-align: center;
+    margin: 50px auto;
+    padding: 3%;
+}
+
+.main1 {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    flex-wrap: wrap;
+    /* align-items: center;
+    text-align: center; */
+    /* justify-content: space-between; */
+}
+
+.indiv {
+    width: 230px;
+    /* height: auto; */
+    /* border: none; */
+    /* flex-direction: column; */
+    /* display: flex; */
+    height: 480px;
+    margin: 0px;
+}
+
+footer {
+    background-color: var(--blue);
+    color: var(--white);
+    border-top: 5px solid var(--gold);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: 'Fredericka the Great';
+}
+
+/* form {
+    background-color: white;
+    width: 600px;
+    border: solid #063C5E;
+    margin: auto;
+    margin-bottom: 5%; */
+/* } */
+
+.updateform {
+    background-color: var(--white);
+    border: solid var(--blue);
+    margin: 5%;
+    padding: 1%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+/* update page fixes needed asap */
+
+
+.update {
+    width: 300px;
+    /* display:flex;
+    justify-content: space-between; */
+}
+
+.updatefield {
+    border: none;
+}
+
+h1 {
+    color: var(--blue);
+    font-family: 'Fredericka the Great'
+}
+
+h2 {
+    color: var(--blue);
+    text-transform: uppercase;
+    font-family: 'Fredericka the Great'
+}
+
+p{
+    margin-bottom:0;
+    margin-top:3px;
+}
+
+.headerul {
+	list-style-type: none;
+	display: flex;
+    justify-content: space-around;
+	text-transform: uppercase;
+    padding-left: 0;
+    width: 40%;
+    font-family: 'Fredericka the Great';
+}
+
+.footerul {
+    list-style-type: none;
+    padding-left: 0;
+    font-family: 'Fredericka the Great';
+}
+
+.footerulsocial {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+}
+
+.about {
+    text-align: left;
+    margin: auto;
+}
+
+a:link {
+    color: var(--white);
+    text-decoration: none; 
+}
+
+a:visited {
+    color: var(--gray);
+}
+
+a:hover {
+    color:var(--pink);
+}
+
+a:active {
+    color:var(--yellow);
+}
+
+.details a:link{
+    color: var(--black);
+}
+/* not working */
+
+img {
+    width: 200px;
+    height: 300px;
+    margin: auto;
+}
+
+.btn,
+button {
+    background-color:var(--gold);
+    border-color: black;
+    width: 200px;
+    align-self: center;
+    text-transform: uppercase; 
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px 7px 2px;
+    text-rendering: auto;
+    color: initial;
+    display: inline-block;
+    text-align: center;
+    margin: 0em;
+    font: 400 15px system-ui;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.watchman {
+    height: auto;
+    border-radius: 25px;
+    border: solid 2px var(--white);
+    margin: 12px;
+}
+
+.navlogo {
+    width: auto;
+    height: 80px;
+}
+
+.footerlogo {
+    width: 200px;
+    height: auto;
+}
+
+.card {
+    background-color: var(--white);
+    width: 70%;
+    border: 10px solid var(--yellow);
+    padding: 0%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 35px;
+}
+
+.topcard {
+    border-radius: 25px 25px 0px 0px;
+    border-bottom: 10px solid var(--yellow);
+    padding-bottom: 24px;
+    background-color:var(--blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.bottomcard {
+    border: 15px var(--blue);
+    border-radius: 25px;
+    background-color: var(--white);
+    width: 60%;
+}
+
+.cardq {
+    padding: 2%;
+}
+
+h3 {
+    color: var(--blue);
+    text-decoration: underline;
+    font-family: 'Fredericka the Great';
+}
+
+/* footer */
+h4 {
+    color: var(--gold);
+    font-size: larger;
+    text-transform: uppercase;
+    font-family: 'Fredericka the Great';
+}
+
+span {
+    color: var(--blue);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+th {
+    color: var(--gold);
+    font-size: larger;
+    text-transform: uppercase;
+}
+
+.updatemain {
+    align-items: center;
+
+}
+
+.updateform {
+    border: solid var(--blue);
+}
+
+/* .updatefield */
+
+.loginfield {
+    box-sizing: border-box;
+    border: none;
+    padding: 1%;
+    
+}
+
+.menu-icon {
+    color: var(--white);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+th, td { 
+    min-width: 200px; 
+}
+
+.scroll{
+    overflow-x: scroll;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .headerul{
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+    }  
+
+    footer,
+    .footerul {
+        padding-left: 3%;
+    }
+
+    .footerulsocial {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        padding-left: 3%;
+    }
+
+    .topcard {
+        width: 100%;
+    }
+
+    .bottomcard {
+        width: 100%;
+        padding: 0px;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+	header {
+		display: flex;
+	}
+
+	.menu-icon {
+		display: none;
+	}
+
+    .card {
+        display:flex;
+    }
+
+    .topcard {
+        border-radius: 25px 0px 0px 25px;
+        border-right: 10px solid var(--yellow);
+        border-bottom: none;
+    }
+
+}
+
+/* To do: 
+index "details" link - fix color 
+update page alignment!  */
+
+
+
+

@@ -1,0 +1,13 @@
+<% for(book of data) { %>
+<tr>
+  <td><%=book.title %></td>
+  <td>
+    <a href="/admin-console/update-book/<%= book._id %>" class="btn">Edit</a>
+  </td>
+  <td>
+    <form action="/books/<%= book._id %>" method="POST" class="inline">
+      <button class="btn" type="submit">Delete</button>
+    </form>
+  </td>
+</tr>
+<% }%>
