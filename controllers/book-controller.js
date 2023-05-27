@@ -17,7 +17,7 @@ module.exports = {
   create_book: (request, response) => {
     const { title, author, publisher, genre, pages, rating, synopsis, image } =
       request.body;
-    const newBook = new Book({
+    const newComic = new Comic({
       title: title,
       author: author,
       publisher: publisher,
@@ -28,7 +28,7 @@ module.exports = {
       photo: image,
     });
 
-    Comic.save(newBook);
+    Comic.save(newComic);
 
     response.redirect("/pages/admin-console");
   },
@@ -48,14 +48,33 @@ module.exports = {
 
   update_book: (request, response) => {
     const { id } = request.params;
-
+    Comic.findOne({ _id: _id }).then((foundBook, error) => {
+      if (error) {
+        return error;
+      } else {
+        response.render("pages/card", {
+          data: foundBook,
+        });
+      }
+    });
     const { title, author, publisher, genre, pages, rating, synopsis, image } =
       request.body;
-
-    Comic.findOneAndUpdate(
-      { _id: id },
-      {
-        $set: {
+    const { _id } = request.params;
+    Comic.findOne({ _id: _id }).then((foundBook, error) => {
+      if (error) {
+        return error;
+      } else {
+        const {
+          title,
+          author,
+          publisher,
+          genre,
+          pages,
+          rating,
+          synopsis,
+          image,
+        } = request.body;
+        foundBook = {
           title: title,
           author: author,
           publisher: publisher,
@@ -63,16 +82,33 @@ module.exports = {
           pages: pages,
           rating: rating,
           synopsis: synopsis,
-          image: image,
-        },
-      }
-    ).then({ new: true }, (error) => {
-      if (error) {
-        return error;
-      } else {
-        response.redirect("/admin-console");
+          photo: image,
+        };
+        foundBook.save();
+        response.redirect("pages/admin-console");
       }
     });
+    //   Comic.findOneAndUpdate(
+    //     { _id: id },
+    //     {
+    //       $set: {
+    //         title: title,
+    //         author: author,
+    //         publisher: publisher,
+    //         genre: genre,
+    //         pages: pages,
+    //         rating: rating,
+    //         synopsis: synopsis,
+    //         image: image,
+    //       },
+    //     }
+    //   ).then({ new: true }, (error) => {
+    //     if (error) {
+    //       return error;
+    //     } else {
+    //       response.redirect("/admin-console");
+    //     }
+    //   });
   },
   //refactor?
 
