@@ -54,7 +54,7 @@ module.exports = {
     
     const {image, title, author, publisher, genre, pages, rating, synopsis} = request.body;
 
-    Book.findByIdAndUpdate(_id, {$set: {
+    Comic.findByIdAndUpdate(_id, {$set: {
       title: title,
       author: author,
       publisher: publisher,
@@ -75,7 +75,7 @@ module.exports = {
   
   book_delete: (request, response) => {
     const { _id } = request.params;
-    Book.deleteOne({_id: _id}, error => {
+    Comic.deleteOne({_id: _id}, error => {
       if(error) {
         return error;
       } else {
