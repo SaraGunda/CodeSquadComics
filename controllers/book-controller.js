@@ -47,20 +47,20 @@ module.exports = {
   },
 
   update_book: (request, response) => {
-    const { id } = request.params;
-    Comic.findOne({ _id: _id }).then((foundBook, error) => {
-      if (error) {
-        return error;
-      } else {
-        response.render("pages/card", {
-          data: foundBook,
-        });
-      }
-    });
-    const { title, author, publisher, genre, pages, rating, synopsis, image } =
-      request.body;
+    // const { id } = request.params;
+    // Comic.findOne({ _id: _id }).then((foundBook, error) => {
+    //   if (error) {
+    //     return error;
+    //   } else {
+    //     response.render("pages/card", {
+    //       data: foundBook,
+    //     });
+    //   }
+    // });
+    // const { title, author, publisher, genre, pages, rating, synopsis, image } =
+    // request.body;
     const { _id } = request.params;
-    Comic.findOne({ _id: _id }).then((foundBook, error) => {
+    Comic.findOne({ _id, id }).then((foundBook, error) => {
       if (error) {
         return error;
       } else {
