@@ -52,18 +52,21 @@ module.exports = {
     const { title, author, publisher, genre, pages, rating, synopsis, image } =
       request.body;
 
-    Comic.findByIdAndUpdate(id, {
-      $set: {
-        title: title,
-        author: author,
-        publisher: publisher,
-        genre: genre,
-        pages: pages,
-        rating: rating,
-        synopsis: synopsis,
-        image: image,
-      },
-    }).then({ new: true }, (error) => {
+    Comic.findOneAndUpdate(
+      { _id: id },
+      {
+        $set: {
+          title: title,
+          author: author,
+          publisher: publisher,
+          genre: genre,
+          pages: pages,
+          rating: rating,
+          synopsis: synopsis,
+          image: image,
+        },
+      }
+    ).then({ new: true }, (error) => {
       if (error) {
         return error;
       } else {
