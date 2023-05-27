@@ -40,7 +40,7 @@ module.exports = {
         return error;
       } else {
         response.render("pages/card", {
-          data: book,
+          data: foundBook,
         });
       }
     });
@@ -55,21 +55,23 @@ module.exports = {
     Comic.findOneAndUpdate(
       { _id: id },
       {
-          title: title,
-          author: author,
-          publisher: publisher,
-          genre: genre,
-          page: pages,
-          rating: rating,
-          synopsis: synopsis,
-          image: image,
-      }, {new: true}).then(() => response.redirect("/admin-console"))
+        title: title,
+        author: author,
+        publisher: publisher,
+        genre: genre,
+        page: pages,
+        rating: rating,
+        synopsis: synopsis,
+        image: image,
+      },
+      { new: true }
+    ).then(() => response.redirect("/admin-console"));
     // ).then({ new: true }, (error) => {
     //   if (error) {
     //     return error;
     //   } else {
 
-      // }
+    // }
   },
   //refactor?
 
