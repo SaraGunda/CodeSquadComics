@@ -63,7 +63,7 @@ module.exports = {
       rating: rating,
       synopsis: synopsis,
       image: image, 
-    }}, {new: true}, error => {
+    }}).then({new: true}, error => {
       if(error) {
         return error;
       } else {
@@ -75,7 +75,7 @@ module.exports = {
   
   book_delete: (request, response) => {
     const { _id } = request.params;
-    Comic.deleteOne({_id: _id}, error => {
+    Comic.deleteOne({_id: _id}).then((_, error) => {
       if(error) {
         return error;
       } else {
