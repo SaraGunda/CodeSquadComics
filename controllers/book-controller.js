@@ -1,5 +1,5 @@
 const Comic = require('../models/comic-model');
-const { response } = require('express');
+// const { response } = require('express');
 const {v4: uuid} = require('uuid');
 
 
