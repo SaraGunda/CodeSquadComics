@@ -5,7 +5,7 @@ const Comic = require('../models/comic-model');
 module.exports = {
  
   all_books: (request, response) => {
-    Comic.find({}, (error, allComics) => {
+    Comic.find({}).then(allComics => {
       if(error){
         return error;
       } else {
@@ -18,7 +18,6 @@ module.exports = {
 
 
   create_book: (request, response) => {
-        // render create
     const {title, author, publisher, genre, pages, rating, synopsis, image} = request.body;
     const newBook = new Book ({
       title: title,
@@ -72,7 +71,7 @@ module.exports = {
       }
     })
   },
- 
+ //refactor?
   
   book_delete: (request, response) => {
     const { _id } = request.params;
