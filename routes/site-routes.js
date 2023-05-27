@@ -18,7 +18,6 @@ router.route('/logout')
     .get(siteController.logout);
 
 router.route('/register')
-    // .get(siteController.register)
     .get(siteController.register_get)
     .post(siteController.register_post);
        

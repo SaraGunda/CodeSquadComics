@@ -1,4 +1,3 @@
-// Starting the Node.js server
 require('dotenv').config();
 
 
@@ -31,15 +30,6 @@ app.use(passport.session());
   
 
 app.use('/',indexRoutes);
-
-
-// // Routes
-// app.get('/', (request, response) => {
-//     response.render('views/pages/index', {
-//         route: "This route points to the Home page"
-//     });
-// });
-
 
 
 require('./config/connection');
