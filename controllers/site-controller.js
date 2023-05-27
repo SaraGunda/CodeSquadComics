@@ -58,9 +58,12 @@ module.exports = {
     });
   },
   logout: (request, response) => {
-    request.logout();
-    response.redirect('/');
+    request.logout(function(err) {
+      if (err) { return next(err); }
+      response.redirect('/');
+    });
   },
+ 
   google_get: passport.authenticate('google', {scope: ['openid', 'profile', 'email']}),
   google_redirect_get: [
     passport.authenticate('google', {failureRedirect: '/login'}),

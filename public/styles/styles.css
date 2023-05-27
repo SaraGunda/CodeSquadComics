@@ -26,10 +26,7 @@ body {
     background-color: var(--blue);
     display: flex;
     flex-direction: row;
-    /* margin: 0%; */
-    /* padding: 1%; */
     height: 100px;
-    /* width: auto; */
     justify-content: space-between;
     align-items: center;
 }
@@ -50,17 +47,10 @@ body {
     flex-direction: row;
     border: none;
     flex-wrap: wrap;
-    /* align-items: center;
-    text-align: center; */
-    /* justify-content: space-between; */
 }
 
 .indiv {
     width: 230px;
-    /* height: auto; */
-    /* border: none; */
-    /* flex-direction: column; */
-    /* display: flex; */
     height: 480px;
     margin: 0px;
 }
@@ -74,14 +64,6 @@ footer {
     flex-wrap: wrap;
     font-family: 'Fredericka the Great';
 }
-
-/* form {
-    background-color: white;
-    width: 600px;
-    border: solid #063C5E;
-    margin: auto;
-    margin-bottom: 5%; */
-/* } */
 
 .updateform {
     background-color: var(--white);
@@ -98,8 +80,6 @@ footer {
 
 .update {
     width: 300px;
-    /* display:flex;
-    justify-content: space-between; */
 }
 
 .updatefield {
