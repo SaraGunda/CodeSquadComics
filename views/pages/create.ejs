@@ -1,58 +1,58 @@
 <%- include('../partials/head') -%> <%- include('../partials/navbar') -%>
 
-    <div class="maintxt">
-      <h1>Create New Comic</h1>
-      <!-- <form
+<div class="maintxt">
+  <h1>Create New Comic</h1>
+  <!-- <form
         action="https://www.w3schools.com/action_page.php"
         method="POST"
         target="_blank"
       > -->
-      <form action="/books/" method="POST">
-        <fieldset class="updatefield">
-          <label>Title:</label>
-          <input type="text" name="title" id="title" minlength="1" required/>
-          <p>
-            <label>Image:</label>
-            <input
-              class="update"
-              type="text"
-              name="photo"
-              id="photo"
-              value="photo"
-            />
-          </p>
-          <!-- add a new input field that has a type of text. This field will temporarily handle images for each new or updating comic book.  -->
-          <p>
-            <label>Author:</label>
-            <input type="text" name="author" id="author" minlength="1" required/>
-          </p>
-          <label for="publisher">Publisher:</label>
-          <select name="publisher" id="publisher" minlength="1" required>
-            <option value="boom! box">BOOM! Box</option>
-            <option value="dc comics">DC Comics</option>
-            <option value="Harry N. Abrams">Harry N. Abrams</option>
-            <option value="Icon Books">Icon Books</option>
-            <option value="Image Comics">Image Comics</option>
-            <option value="Marvel">Marvel</option>
-            <option value="Simon & Schuster">Simon & Shuster</option>
-            <option value="Top Shelf Productions">Top Shelf Productions</option>
-            <option value="VIZ Media LLC">VIZ Media LLC</option>
-          </select>
-          <p>
-            <label>Genre:</label>
-            <input type="text" name="genre" id="genre" minlength="1" required/>
-          </p>
-          <label>Number of Pages:</label>
-          <input type="text" name="pages" id="pages" min="1" required/>
-          <p>
-            <label>Rating:</label>
-            <input type="text" name="rating" id="rating" min="0" max="5" required/>
-          </p>
-          <label>Synopsis:</label>
-          <input type="text" name="synopsis" id="synopsis" min="1" required/>
-          <button type="submit">Submit</button> 
-        </fieldset>
-      </form>
-    </div>
+  <form action="/books/" method="POST">
+    <fieldset class="updatefield">
+      <label>Title:</label>
+      <input type="text" name="title" id="title" minlength="1" required />
+      <p>
+        <label>Image:</label>
+        <input
+          class="update"
+          type="text"
+          name="photo"
+          id="photo"
+          value="photo"
+        />
+      </p>
+      <!-- add a new input field that has a type of text. This field will temporarily handle images for each new or updating comic book.  -->
+      <p>
+        <label>Author:</label>
+        <input type="text" name="author" id="author" minlength="1" required />
+      </p>
+      <label for="publisher">Publisher:</label>
+      <select name="publisher" id="publisher" minlength="1" required>
+        <option value="boom! box">BOOM! Box</option>
+        <option value="dc comics">DC Comics</option>
+        <option value="Harry N. Abrams">Harry N. Abrams</option>
+        <option value="Icon Books">Icon Books</option>
+        <option value="Image Comics">Image Comics</option>
+        <option value="Marvel">Marvel</option>
+        <option value="Simon & Schuster">Simon & Shuster</option>
+        <option value="Top Shelf Productions">Top Shelf Productions</option>
+        <option value="VIZ Media LLC">VIZ Media LLC</option>
+      </select>
+      <p>
+        <label>Genre:</label>
+        <input type="text" name="genre" id="genre" minlength="1" required />
+      </p>
+      <label>Number of Pages:</label>
+      <input type="text" name="pages" id="pages" min="1" required />
+      <p>
+        <label>Rating:</label>
+        <input type="text" name="rating" id="rating" min="0" max="5" required />
+      </p>
+      <label>Synopsis:</label>
+      <input type="text" name="synopsis" id="synopsis" min="1" required />
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+</div>
 
 <%- include('../partials/footer') -%>
