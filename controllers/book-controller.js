@@ -15,14 +15,14 @@ module.exports = {
   },
 
   create_book: (request, response) => {
-    const { title, author, publisher, genre, page, rating, synopsis, image } =
+    const { title, author, publisher, genre, pages, rating, synopsis, image } =
       request.body;
     const newBook = new Book({
       title: title,
       author: author,
       publisher: publisher,
       genre: genre,
-      page: page,
+      pages: pages,
       rating: rating,
       synopsis: synopsis,
       photo: image,
@@ -49,7 +49,7 @@ module.exports = {
   update_book: (request, response) => {
     const { id } = request.params;
 
-    const { title, author, publisher, genre, page, rating, synopsis, image } =
+    const { title, author, publisher, genre, pages, rating, synopsis, image } =
       request.body;
 
     Comic.findOneAndUpdate(
@@ -59,7 +59,7 @@ module.exports = {
         author: author,
         publisher: publisher,
         genre: genre,
-        page: page,
+        pages: pages,
         rating: rating,
         synopsis: synopsis,
         image: image,

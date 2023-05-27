@@ -23,7 +23,7 @@ const comicSchema = new Schema({
     required: [true, 'Genre is required.'],
     minlength:[1, 'Field cannot be left blank.']
   },
-  page: {
+  pages: {
     type: Number,
     required: [true, 'This is a required field.'],
     min:[1, 'Minimum pages is 1.']
