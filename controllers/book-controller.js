@@ -52,9 +52,8 @@ module.exports = {
     const { title, author, publisher, genre, pages, rating, synopsis, image } =
       request.body;
 
-    Comic.findOneAndUpdate(
-      { _id: id },
-      {
+    Comic.findByIdAndUpdate(id, {
+      $set: {
         title: title,
         author: author,
         publisher: publisher,
@@ -64,14 +63,13 @@ module.exports = {
         synopsis: synopsis,
         image: image,
       },
-      { new: true }
-    ).then(() => response.redirect("/admin-console"));
-    // ).then({ new: true }, (error) => {
-    //   if (error) {
-    //     return error;
-    //   } else {
-
-    // }
+    }).then({ new: true }, (error) => {
+      if (error) {
+        return error;
+      } else {
+        response.redirect("/admin-console");
+      }
+    });
   },
   //refactor?
 
